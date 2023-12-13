@@ -1,0 +1,64 @@
+@import url("~bootstrap/dist/css/bootstrap.min.css");
+
+:root {
+  --primary: #529cff !important;
+  --secondary: #98c99e !important;
+  --accent-color: #98c99e;
+  --success: #6abf69;
+  --info: #6ea2f5;
+  --warning: #f7b529;
+  --danger: #de656b;
+  --light: #f0f4f8;
+  --dark: #394240;
+  --primary-rgb: 82, 156, 255;
+  --secondary-rgb: 132, 156, 158;
+  --success-rgb: 106, 191, 105;
+  --info-rgb: 110, 162, 245;
+  --warning-rgb: 247, 181, 41;
+  --danger-rgb: 222, 101, 107;
+  --light-rgb: 240, 244, 248;
+  --dark-rgb: 57, 66, 65;
+  --primary-text-emphasis: #052c65;
+  --secondary-text-emphasis: #2b2f32;
+  --success-text-emphasis: #0a3622;
+  --info-text-emphasis: #055160;
+  --warning-text-emphasis: #664d03;
+  --danger-text-emphasis: #58151c;
+  --light-text-emphasis: #495057;
+  --dark-text-emphasis: #495057;
+  --primary-bg-subtle: #cfe2ff;
+  --secondary-bg-subtle: #e2e3e5;
+  --success-bg-subtle: #d1e7dd;
+  --info-bg-subtle: #cff4fc;
+  --warning-bg-subtle: #fff3cd;
+  --danger-bg-subtle: #f8d7da;
+  --light-bg-subtle: #fcfcfd;
+  --dark-bg-subtle: #ced4da;
+  --primary-border-subtle: #9ec5fe;
+  --secondary-border-subtle: #c4c8cb;
+  --success-border-subtle: #a3cfbb;
+  --info-border-subtle: #9eeaf9;
+  --warning-border-subtle: #ffe69c;
+  --danger-border-subtle: #f1aeb5;
+  --light-border-subtle: #e9ecef;
+  --dark-border-subtle: #adb5bd;
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --font-sans-serif: roboto, -apple-system, blinkmacsystemfont, "Segoe UI",
+    "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-monospace: sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --body-font-family: var(--bs-font-sans-serif);
+}
+
+body {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+  font-weight: 400;
+  font-size: 16px;
+
+  a {
+    color: var(--bs-dark);
+  }
+}
