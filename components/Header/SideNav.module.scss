@@ -1,0 +1,48 @@
+.sideNav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light);
+  overflow-x: hidden;
+  transition:
+    opacity 0.2s,
+    width 0.2s;
+  opacity: 0;
+  width: 0;
+
+  @media screen and (width >= 992px) {
+    display: none;
+  }
+}
+
+.open {
+  width: 250px;
+  opacity: 1;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeButton {
+  padding: 16px;
+  cursor: pointer;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.footer {
+  text-align: center;
+}

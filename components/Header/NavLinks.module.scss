@@ -1,0 +1,14 @@
+.link {
+  font-size: 18px;
+  color: var(--secondary);
+  padding: 8px 16px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--light-hover);
+  }
+}
+
+.activeLink {
+  color: var(--primary);
+}

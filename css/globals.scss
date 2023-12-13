@@ -1,14 +1,15 @@
 @import url("~bootstrap/dist/css/bootstrap.min.css");
 
 :root {
-  --primary: #529cff !important;
-  --secondary: #98c99e !important;
+  --primary: #529cff;
+  --secondary: #0b2b57;
+  --light-hover: #ededed;
   --accent-color: #98c99e;
   --success: #6abf69;
   --info: #6ea2f5;
   --warning: #f7b529;
   --danger: #de656b;
-  --light: #f0f4f8;
+  --light: #fff;
   --dark: #394240;
   --primary-rgb: 82, 156, 255;
   --secondary-rgb: 132, 156, 158;

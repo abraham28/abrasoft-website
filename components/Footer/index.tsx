@@ -21,27 +21,16 @@ const Footer: React.FC<Footer> = () => {
             <Col lg={{ order: "first" }} xs={{ order: "last" }}>
               <Row>
                 <Col>
-                  <p className={styles.footerTexth4}>
-                    Reach out, your voice matters
-                  </p>
+                  <p className={styles.footerTexth4}>{"footer.heading"}</p>
                   <blockquote className={styles.footerPlainText}>
-                    At Abrasoft, we are dedicated to empowering individuals and
-                    businesses to thrive through our comprehensive recruitment
-                    services. We take pride in our unwavering commitment to
-                    forging meaningful connections between talented individuals
-                    and rewarding career opportunities. Your success is our
-                    priority, and we aspire to be the reliable partner guiding
-                    you through every step of your career journey.
+                    {"footer.paragraph"}
                   </blockquote>
-                  <p className={styles.footerAddress}>
-                    Blk 11 Lot 28 Security Ave, Banker&apos;s Village 1, North
-                    Caloocan City, Philippines
-                  </p>
+                  <p className={styles.footerAddress}>{"company.address"}</p>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <p className={styles.footerTexth5}>Useful Links</p>
+                  <p className={styles.footerTexth5}>{"footer.useful-links"}</p>
                   <ListGroup className={styles.footerPlainText}>
                     {NAV_LINKS_ARR.map((item, key) => {
                       return (
@@ -55,7 +44,7 @@ const Footer: React.FC<Footer> = () => {
                   </ListGroup>
                 </Col>
                 <Col>
-                  <p className={styles.footerTexth5}>Contact Us</p>
+                  <p className={styles.footerTexth5}>{"contact-us"}</p>
                   <a
                     className={styles.contacts}
                     href={`mailto:${EMAIL_ADDRESS}`}
@@ -68,7 +57,7 @@ const Footer: React.FC<Footer> = () => {
                   <div className={styles.snsLinks}>
                     <Link href={FACEBOOK_LINK} target="_blank" passHref>
                       <BsFacebook />
-                      /abrasoft
+                      {"company.facebook-link"}
                     </Link>
                   </div>
                 </Col>

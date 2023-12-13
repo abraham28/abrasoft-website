@@ -1,6 +1,8 @@
 export const FACEBOOK_LINK = "https://www.facebook.com/abrasoft";
 export const EMAIL_ADDRESS = "abraham.guerrero@abrasoft.com";
 
+export const locales = ["en", "tl"];
+
 //ROUTES
 export const HOME_ROUTE = "/";
 export const ABOUT_ROUTE = "/about";
@@ -16,3 +18,5 @@ export const NAV_LINKS_ARR = [
 
 export const OFFICIAL_DOMAIN = "abrasoft.com";
 export const OFFICIAL_DOMAIN_URL = `https://${OFFICIAL_DOMAIN}/`;
+
+export const COPYRIGHT = "© 2023 Abrasoft Corporation";

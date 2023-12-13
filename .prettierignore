@@ -42,8 +42,6 @@ package.json
 .prettierignore
 .stylelintignore
 .eslintignore
-.eslintrc.json
-.stylelintrc.json
 tsconfig.json
 
 #carousel bootstrap

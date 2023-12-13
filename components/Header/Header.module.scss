@@ -1,163 +1,45 @@
-.headerContainer {
+.navBar {
   display: flex;
-  justify-content: center;
-}
-
-.navLinksContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  white-space: nowrap;
-  font-weight: 600;
-  margin-bottom: 1rem;
-
-  @media screen and (width >= 992px) {
-    flex-direction: row;
-  }
-}
-
-.snsLinks {
-  justify-content: center;
-  text-align: center;
-  font-size: 24px;
-  min-width: 150px;
-  display: flex;
-
-  a {
-    margin: 0;
-    display: flex;
-  }
-
-  svg {
-    margin-right: 1rem;
-    color: var(--white-color);
-  }
-}
-
-.navLinksContainer2 {
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  white-space: nowrap;
-  font-weight: 600;
-
-  @media (width >= 992px) {
-    flex-direction: row;
-    display: flex;
-  }
-
-  @media (width >= 1060px) {
-    font-size: 1.2rem;
-  }
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light);
 }
 
 .innerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  place-content: center space-between;
-  align-items: center;
-
-  @media (width >= 992px) {
-    flex-wrap: nowrap;
-  }
-}
-
-.toggleBtn {
-  @media (width >= 992px) {
-    display: none;
-  }
-}
-
-.navBar {
-  display: flex;
-  background-color: var(--bs-primary);
-}
-
-.sideNav {
-  height: 100%; /* 100% Full-height */
-  width: 250px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Stay on top */
-  top: 0; /* Stay at the top */
-  right: 0;
-  background-color: var(--bs-primary); /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-
-  @media screen and (height <= 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-
-    .sidenav a {
-      font-size: 18px;
-    }
-  }
-
-  @media screen and (width >= 992px) {
-    display: none;
-  }
-}
-
-.actionButtonsSm {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  white-space: nowrap;
   flex-wrap: nowrap;
-
-  @media screen and (width >= 992px) {
-    display: none !important;
-  }
-}
-
-.navActions {
   display: flex;
-  white-space: nowrap;
-  flex-direction: column;
+  place-content: center space-between;
+  background-color: var(--light);
 
-  button {
+  @media screen and (width < 992px) {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
     width: 100%;
-
-    @media screen and (width >= 576px) {
-      width: unset;
-    }
-  }
-
-  button:first-child {
-    margin-bottom: 8px;
-
-    @media screen and (width >= 576px) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media screen and (width >= 576px) {
-    flex-direction: row;
-  }
-
-  @media screen and (width >= 992px) {
-    align-items: center;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
-.actionButtonsLg {
-  display: none;
+.brandLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 
-  @media screen and (width >= 992px) {
-    display: grid;
-    justify-items: center;
-    gap: 8px;
+  img {
+    margin-right: 8px;
   }
-}
 
-.sideNavToggleBtn {
-  position: absolute;
-  top: 28px;
-  right: 12px;
+  p {
+    margin: 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 28px;
+  }
 }
