@@ -42,5 +42,4 @@ package.json
 .stylelintrc.json
 .prettierrc.json
 
-#carousel bootstrap
-/app/components/TestimoniesSection/carousel.scss
+css/globals.scss

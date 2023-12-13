@@ -1,72 +1,64 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import { Col } from "react-bootstrap";
-import ListGroup from "react-bootstrap/ListGroup";
-import { ListGroupItem } from "react-bootstrap";
 import styles from "./Footer.module.scss";
+import * as constants from "@/app/constants";
+import { Button, Container } from "react-bootstrap";
 import Link from "next/link";
-import { BsFacebook } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import { EMAIL_ADDRESS, FACEBOOK_LINK, NAV_LINKS_ARR } from "@/app/constants";
 
 interface Footer {}
 
 const Footer: React.FC<Footer> = () => {
   return (
-    <div>
-      <footer className={styles.footerLayout}>
-        <Container>
-          <Row>
-            <Col lg={{ order: "first" }} xs={{ order: "last" }}>
-              <Row>
-                <Col>
-                  <p className={styles.footerTexth4}>{"footer.heading"}</p>
-                  <blockquote className={styles.footerPlainText}>
-                    {"footer.paragraph"}
-                  </blockquote>
-                  <p className={styles.footerAddress}>{"company.address"}</p>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <p className={styles.footerTexth5}>{"footer.useful-links"}</p>
-                  <ListGroup className={styles.footerPlainText}>
-                    {NAV_LINKS_ARR.map((item, key) => {
-                      return (
-                        <ListGroupItem key={key} className={styles.links}>
-                          <Link href={item.path}>
-                            <p>{item.name}</p>
-                          </Link>
-                        </ListGroupItem>
-                      );
-                    })}
-                  </ListGroup>
-                </Col>
-                <Col>
-                  <p className={styles.footerTexth5}>{"contact-us"}</p>
-                  <a
-                    className={styles.contacts}
-                    href={`mailto:${EMAIL_ADDRESS}`}
-                  >
-                    <p>
-                      <MdEmail />
-                      &nbsp;{EMAIL_ADDRESS}
-                    </p>
-                  </a>
-                  <div className={styles.snsLinks}>
-                    <Link href={FACEBOOK_LINK} target="_blank" passHref>
-                      <BsFacebook />
-                      {"company.facebook-link"}
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
+    <footer>
+      <div className={styles.topFooter}>
+        <Container className={styles.container}>
+          <div className={styles.message}>
+            <p>We develop, test and deploy software apps.</p>
+            <p>
+              Tell us your idea.&nbsp;
+              <Button variant="secondary">Send a message</Button>
+            </p>
+          </div>
+          <div className={styles.contactLinks}>
+            <div>
+              <p>Browse More</p>
+              <ul>
+                {constants.NAV_LINKS_ARR.map((link, key) => (
+                  <li key={key}>
+                    <Link href={link.path}>{link.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p>Contact Us</p>
+              <ul>
+                <li>
+                  <Link href={`tel:${constants.CONTACT_NUMBER}`}>
+                    {constants.CONTACT_NUMBER}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`mailto:${constants.EMAIL_ADDRESS}`}>
+                    {constants.EMAIL_ADDRESS}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={constants.FACEBOOK_LINK} target="_blank">
+                    {constants.FACEBOOK_LINK}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </Container>
-      </footer>
-    </div>
+      </div>
+      <Container>
+        <div className={styles.bottomFooter}>
+          <p>{constants.TAGLINE}</p>
+          <p>{constants.COPYRIGHT}</p>
+        </div>
+      </Container>
+    </footer>
   );
 };
 

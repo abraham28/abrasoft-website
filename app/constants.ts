@@ -1,5 +1,6 @@
 export const FACEBOOK_LINK = "https://www.facebook.com/abrasoft";
 export const EMAIL_ADDRESS = "abraham.guerrero@abrasoft.com";
+export const CONTACT_NUMBER = "(+63) 915-654-9303";
 
 export const locales = ["en", "tl"];
 
@@ -20,3 +21,4 @@ export const OFFICIAL_DOMAIN = "abrasoft.com";
 export const OFFICIAL_DOMAIN_URL = `https://${OFFICIAL_DOMAIN}/`;
 
 export const COPYRIGHT = "© 2023 Abrasoft Corporation";
+export const TAGLINE = "Turning Dreams into Digital Reality";
