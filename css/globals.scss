@@ -1,7 +1,8 @@
 @import url("~bootstrap/dist/css/bootstrap.min.css");
 
 :root {
-  --primary: #529cff;
+  --primary: #216ed3;
+  --primary-hover: #43b4ff;
   --secondary: #0b2b57;
   --secondary-hover: #153768;
   --light-hover: #ededed;
@@ -68,6 +69,23 @@ body {
 .btn {
   border: 0;
   border-radius: 0;
+  padding: 8px 16px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    background-color: var(--primary-hover) !important;
+  }
+
+  &:active {
+    background-color: var(--primary) !important;
+  }
 }
 
 .btn-secondary {
@@ -76,7 +94,6 @@ body {
 
   &:hover,
   &:active,
-  &:not(.btn-check) + .btn:active,
   &:focus,
   &:focus-visible {
     background-color: var(--secondary-hover) !important;
