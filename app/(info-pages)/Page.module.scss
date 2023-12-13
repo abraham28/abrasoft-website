@@ -1,0 +1,46 @@
+.hero {
+  background: rgb(11 43 87);
+  color: var(--light);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (width >= 768px) {
+    h1,
+    p {
+      width: 50%;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  place-content: center left;
+  padding: 80px 0;
+  background: linear-gradient(
+      90deg,
+      rgb(11 43 87 / 100%) 0%,
+      rgb(11 43 87 / 100%) 50%,
+      transparent 100%
+    ),
+    url("/images/working-on-floor.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 50svh;
+
+  button {
+    display: inline-block;
+  }
+
+  @media screen and (width < 992px) {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
