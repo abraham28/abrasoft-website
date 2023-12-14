@@ -70,3 +70,15 @@
     }
   }
 }
+
+.pageDivider {
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+
+  svg {
+    position: absolute;
+    bottom: -5px;
+    z-index: 2;
+  }
+}

@@ -90,7 +90,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </Container>
-      <div style={{ overflow: "hidden" }}>
+      <div className={styles.pageDivider}>
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 1200 120"
