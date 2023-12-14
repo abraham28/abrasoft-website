@@ -13,6 +13,10 @@ export const NAV_HOME = "/";
 
 export const NAV_LINKS_ARR = [
   { path: HOME_ROUTE, name: "Home" },
+  {
+    path: "https://books.abrasoft.com/login",
+    name: "Accounting Books",
+  },
   // { path: ABOUT_ROUTE, name: "About Us" },
   // { path: CONTACT_ROUTE, name: "Contact Us" },
 ];
