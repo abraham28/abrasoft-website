@@ -28,7 +28,7 @@ const SideNav: React.FC<SideNavProps> = ({ open, onClose }) => {
         </span>
       </div>
       <div className={styles.linksContainer}>
-        <NavLinks />
+        <NavLinks onClick={onClose} />
       </div>
       <div className={styles.footer}>{constants.COPYRIGHT}</div>
     </div>
