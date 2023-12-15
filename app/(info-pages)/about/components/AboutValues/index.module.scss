@@ -1,0 +1,31 @@
+.aboutvalues {
+  padding-top: var(--padding-4xl);
+  padding-bottom: var(--padding-4xl);
+  background-color: var(--light);
+  color: var(--secondary);
+
+  b {
+    color: var(--primary);
+    font-size: var(--font-size-md);
+  }
+}
+
+.ourValues {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bolder);
+  text-align: center;
+  margin-bottom: var(--padding-2xl);
+}
+
+.container1,
+.container2 {
+  display: grid;
+  gap: var(--gap-lg);
+}
+
+.container1 {
+  @media screen and (width >= 1200px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
+}

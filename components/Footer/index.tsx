@@ -24,7 +24,9 @@ const Footer: React.FC<Footer> = () => {
               <ul>
                 {constants.NAV_LINKS_ARR.map((link, key) => (
                   <li key={key}>
-                    <Link href={link.path}>{link.name}</Link>
+                    <Link href={link.path} target={link.target}>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

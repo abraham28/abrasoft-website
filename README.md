@@ -39,6 +39,7 @@ To run the project in development mode:
 This will start the development server, and you can view the website at [http://localhost:3000](http://localhost:3000/).
 
 ## Code Linting
+
 Configure husky for pre-commit
 
 `npm run configure-husky`
@@ -66,4 +67,3 @@ This will start the server and make the website available at [http://localhost:3
 Feel free to modify the content and structure of the website to suit the needs of Abrasoft.
 
 For more information about Next.js, check the [Next.js documentation](https://nextjs.org/docs).
-```

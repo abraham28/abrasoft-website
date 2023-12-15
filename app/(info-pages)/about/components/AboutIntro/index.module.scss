@@ -1,0 +1,38 @@
+.aboutintro {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding-top: var(--padding-4xl);
+  padding-bottom: var(--padding-4xl);
+}
+
+.container {
+  @media screen and (width >= 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-base);
+    align-items: center;
+  }
+}
+
+.headings {
+  @media screen and (width >= 768px) {
+    display: grid;
+    place-content: center;
+  }
+}
+
+.abrasoft,
+.isASoftware {
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-3xl);
+  max-width: 500px;
+}
+
+.isASoftware {
+  color: var(--primary-hover);
+}
+
+.shortsummary {
+  font-size: var(--font-size-base);
+  max-width: 500px;
+}

@@ -9,16 +9,17 @@ import * as constants from "@/app/constants";
 const NavLinks: React.FC = () => {
   const pathname = usePathname();
 
-  return constants.NAV_LINKS_ARR.map((item) => {
+  return constants.NAV_LINKS_ARR.map((link) => {
     return (
       <Link
-        href={item.path}
-        key={item.path}
+        href={link.path}
+        key={link.path}
+        target={link.target}
         className={`${styles.link}${
-          pathname === item.path ? ` ${styles.activeLink}` : ""
+          pathname === link.path ? ` ${styles.activeLink}` : ""
         }`}
       >
-        {item.name}
+        {link.name}
       </Link>
     );
   });

@@ -1,0 +1,49 @@
+.aboutmissionvision {
+  background: radial-gradient(
+    circle,
+    var(--primary),
+    var(--secondary) 10%,
+    var(--secondary) 100%
+  );
+  color: var(--primary-hover);
+  padding-bottom: var(--padding-4xl);
+  position: relative;
+  z-index: 2;
+}
+
+.hereAtOur {
+  font-size: var(--font-size-base);
+  color: var(--light);
+}
+
+.container2 {
+  color: var(--light);
+}
+
+.container {
+  display: grid;
+  gap: var(--gap-2xl);
+  padding-top: var(--padding-4xl);
+
+  @media screen and (width >= 920px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
+}
+
+.pageDivider {
+  position: relative;
+  overflow: hidden;
+  height: 80px;
+
+  svg {
+    position: absolute;
+    top: -1px;
+    z-index: 2;
+    width: 200%;
+
+    @media screen and (width >= 920px) {
+      width: 100%;
+    }
+  }
+}
