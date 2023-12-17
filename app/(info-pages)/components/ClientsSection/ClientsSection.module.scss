@@ -44,7 +44,7 @@
 
   @media screen and (width >= 968px) {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1.5fr 1fr;
     justify-content: center;
   }
 
@@ -57,19 +57,11 @@
   display: grid;
   place-content: center;
   margin: 0 auto;
-  padding-right: 2rem;
   box-shadow: 0 0 36px 8px var(--secondary) inset;
   border-radius: 8px;
   height: auto;
   min-height: 320px;
   max-width: fit-content;
-  background: var(--light);
-  background: radial-gradient(
-    circle,
-    var(--light) 0%,
-    var(--light) 42%,
-    var(--secondary) 62%
-  );
 
   > img {
     width: auto;
