@@ -12,7 +12,7 @@ This website is built with Next.js for the purposes of representing Abrasoft. Be
 ### Installation
 
 1. Clone the repository:
-   `git clone https://github.com/abraham28/abrasoft-website.git`
+   `git clone https://github.com/[yourusername]/abrasoft-website.git`
 2. Navigate to the project directory:
    `cd abrasoft-website`
 3. Install dependencies:
