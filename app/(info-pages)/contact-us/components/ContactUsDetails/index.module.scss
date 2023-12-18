@@ -1,0 +1,26 @@
+.sectionLayout {
+  background-color: var(--secondary);
+}
+
+.detailsLogo {
+  background-image: url(/images/Logo.png);
+  background-size: contain;
+  height: 330px;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (width <= 991px) {
+    height: 300px;
+  }
+}
+
+.information {
+  text-align: center;
+  color: var(--light);
+
+  @media (width >= 992px) {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
