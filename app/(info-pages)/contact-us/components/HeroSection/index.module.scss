@@ -1,56 +1,25 @@
 .hero {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   font-size: var(--font-size-base);
   color: var(--light);
   font-family: var(--font-roboto);
   background-color: var(--secondary);
-  background-image: url(/images/waves1.png);
-  background-repeat: no-repeat;
-  background-position: 0px bottom;
-  background-size: 100% 30%;
-
-  @media (width >= 990px) {
-  background-position: 0px 20vh;
-  background-size: 100% 50%;
-  padding-bottom: 120px;
-  background-position: 0px bottom;
-  }
 }
 
 .container {
   height: 100%;
 }
 
-.actionButton {
-  margin: 20px auto;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.outlineButton {
-  border: solid var(--light) 1px;
-  background-color: var(--transparent);
-  font-size: 15px;
-}
-
-.outlineButton:hover {
-  color: var(--secondary);
-  --primary-hover: var(--light);
-  border-color: transparent;
-}
-
-.primaryButton {
-  position: relative;
-  font-size: 15px;
-  padding: 9px 20px;
-}
-
 .headerText {
   display: flex;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  @media (width >= 991px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .header {
@@ -65,4 +34,15 @@
 .elevatingYourExperience {
   font-weight: 300;
   font-size: 20px;
+}
+.pageDivider {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+
+  svg {
+    position: absolute;
+    bottom: -5px;
+    z-index: 2;
+  }
 }

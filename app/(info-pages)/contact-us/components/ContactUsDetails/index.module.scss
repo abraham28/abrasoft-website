@@ -3,11 +3,12 @@
 }
 
 .detailsLogo {
-  background-image: url(/images/Logo.png);
+  background-image: url("/images/company-logo-contactUsSection.webp");
   background-size: contain;
   height: 330px;
   background-position: center;
   background-repeat: no-repeat;
+
   @media (width <= 991px) {
     height: 300px;
   }
