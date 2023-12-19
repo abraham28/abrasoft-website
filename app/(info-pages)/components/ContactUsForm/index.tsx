@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Button,
   Col,
@@ -7,17 +7,12 @@ import {
   Form,
   FormControl,
   FormLabel,
-  FormSelect,
   Row,
 } from "react-bootstrap";
 import styles from "./index.module.scss";
+import ServiceChoicesForm from "../ServiceChoicesForm/ServiceChoicesForm";
 
 const ContactUsPoolingForm = () => {
-  const [options, setOptions] = useState("");
-
-  const handleOptions = (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => setOptions(event.target.value);
   return (
     <section>
       <Container>
@@ -64,30 +59,7 @@ const ContactUsPoolingForm = () => {
             />
           </div>
 
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Service</FormLabel>
-            <FormSelect
-              id="handle-other-option"
-              value={options}
-              onChange={handleOptions}
-            >
-              <option>Select service</option>
-              <option value="Web Development">Web Development</option>
-              <option value="App Development">App Development</option>
-              <option value="Game Development">Game Development</option>
-              <option value="Other">Other:</option>
-            </FormSelect>
-            {options === "Other" ? (
-              <FormControl
-                className="my-2"
-                type="text"
-                placeholder="Enter other service"
-                required
-              />
-            ) : (
-              ""
-            )}
-          </div>
+          <ServiceChoicesForm />
 
           <div className="mb-3">
             <FormLabel className={styles.formLabel}>Subject</FormLabel>
