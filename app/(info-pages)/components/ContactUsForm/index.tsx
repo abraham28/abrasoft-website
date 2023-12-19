@@ -38,14 +38,14 @@ const ContactUsPoolingForm = () => {
 
           <div className="mb-3">
             <FormLabel className={styles.formLabel}>Company</FormLabel>
-            <FormControl placeholder="My Company" required />
+            <FormControl placeholder="My Company" />
           </div>
 
           <div className="mb-3">
             <FormLabel className={styles.formLabel}>Email</FormLabel>
             <FormControl
               type="email"
-              placeholder="exampleEmail@myemail.com"
+              placeholder="email@example.com"
               required
             />
           </div>
@@ -60,11 +60,6 @@ const ContactUsPoolingForm = () => {
           </div>
 
           <ServiceChoicesForm />
-
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Subject</FormLabel>
-            <FormControl placeholder="Enter your subject here" required />
-          </div>
 
           <div className="mb-3">
             <FormLabel className={styles.formLabel}>Message</FormLabel>

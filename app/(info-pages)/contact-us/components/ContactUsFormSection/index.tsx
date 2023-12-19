@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import ContactUsPoolingForm from "@/app/(info-pages)/components/ContactUsForm";
 
-const ContactUsForm: NextPage = () => {
+const ContactUsFormSection: NextPage = () => {
   return (
     <section className="py-5">
       <Container>
@@ -29,4 +29,4 @@ const ContactUsForm: NextPage = () => {
   );
 };
 
-export default ContactUsForm;
+export default ContactUsFormSection;
