@@ -26,7 +26,11 @@
   margin-bottom: 16px;
 
   > button {
-    text-wrap: nowrap;
+    overflow-wrap: anywhere;
+
+    @media screen and (width >= 220px) {
+      text-wrap: nowrap;
+    }
   }
 
   @media screen and (width >= 768px) {
@@ -59,11 +63,15 @@
 
   > img {
     width: auto;
-    height: 250px;
+    height: auto;
     margin-bottom: 8px;
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
+
+    @media screen and (width >= 320px) {
+      height: 250px;
+    }
 
     @media screen and (width >= 968px) {
       margin-bottom: 0;

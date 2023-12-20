@@ -52,7 +52,6 @@ const ServicesSection = () => {
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
-        <h4>Services</h4>
         <h2>What we can do for you</h2>
         <div className={styles.controls}>
           {sampleServices.map((item, key) => (

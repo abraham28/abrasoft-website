@@ -12,21 +12,25 @@ interface NavLinksProps {
 const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
   const pathname = usePathname();
 
-  return constants.NAV_LINKS_ARR.map((link) => {
-    return (
-      <Link
-        href={link.path}
-        key={link.path}
-        target={link.target}
-        className={`${styles.link}${
-          pathname === link.path ? ` ${styles.activeLink}` : ""
-        }`}
-        onClick={onClick}
-      >
-        {link.name}
-      </Link>
-    );
-  });
+  return (
+    <>
+      {constants.NAV_LINKS_ARR.map((link) => {
+        return (
+          <Link
+            href={link.path}
+            key={link.path}
+            target={link.target}
+            className={`${styles.link}${
+              pathname === link.path ? ` ${styles.activeLink}` : ""
+            }`}
+            onClick={onClick}
+          >
+            {link.name}
+          </Link>
+        );
+      })}
+    </>
+  );
 };
 
 export default NavLinks;

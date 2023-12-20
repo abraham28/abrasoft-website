@@ -11,8 +11,7 @@ const ClientsSection = () => {
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
-        <h4>Client Review</h4>
-        <h2>We&apos;d love to serve you too</h2>
+        <h2>Our Client Reviews</h2>
         <Carousel controls={false}>
           <CarouselItem>
             <div className={styles.details}>

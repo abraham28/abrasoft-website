@@ -1,15 +1,10 @@
-.sideNav {
-  z-index: 999;
+.sideNavWrapper {
+  z-index: 998;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--light);
-  overflow-x: hidden;
-  transition:
-    opacity 0.2s,
-    width 0.2s;
-  opacity: 0;
+  inset: 0;
+  cursor: auto;
+  background: rgb(255 255 255 / 35.6%);
+  transition: opacity 0.2s;
   width: 0;
 
   @media screen and (width >= 992px) {
@@ -18,8 +13,31 @@
 }
 
 .open {
-  width: 250px;
-  opacity: 1;
+  width: 100%;
+}
+
+.sideNav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--light);
+  overflow-x: hidden;
+  width: 0;
+  transition:
+    opacity 0.2s,
+    width 0.2s;
+}
+
+.sideNavOpen {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  width: 100%;
+
+  @media screen and (width >= 250px) {
+    width: 250px;
+  }
 }
 
 .actionContainer {
@@ -37,12 +55,16 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  white-space: nowrap;
   font-weight: 600;
   margin-bottom: 1rem;
   flex-grow: 1;
+
+  @media screen and (width >= 190px) {
+    white-space: nowrap;
+  }
 }
 
 .footer {
   text-align: center;
+  align-self: flex-end;
 }

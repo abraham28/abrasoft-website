@@ -18,8 +18,8 @@ const Header = () => {
             <Image
               src={CompanyLogo}
               alt="Abrasoft Logo"
-              height={70}
-              width={70}
+              height={50}
+              width={50}
               className="d-inline-block align-text-top"
             />
             <p>Abrasoft</p>
