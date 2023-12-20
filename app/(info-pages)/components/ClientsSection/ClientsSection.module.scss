@@ -90,13 +90,4 @@
 
 .detailTitle {
   color: var(--primary-hover);
-  font-size: var(--font-size-md);
-
-  @media screen and (width >= 220px) {
-    font-size: var(--font-size-lg);
-  }
-
-  @media screen and (width >= 320px) {
-    font-size: var(--font-size-3xl);
-  }
 }
