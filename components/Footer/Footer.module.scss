@@ -60,12 +60,7 @@
   display: grid;
 
   ul {
-    padding-left: 14px;
-    font-size: 14px;
-
-    @media screen and (width >= 340px) {
-      font-size: var(--font-size-base);
-    }
+    padding-left: var(--padding-lg);
   }
 
   @media screen and (width >= 768px) {

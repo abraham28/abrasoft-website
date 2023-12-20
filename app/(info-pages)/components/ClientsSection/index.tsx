@@ -52,7 +52,7 @@ const ClientsSection = () => {
           <CarouselItem>
             <div className={styles.details}>
               <div className={styles.detailsText}>
-                <h4 className={styles.detailTitle}>{"Wash U Want"}</h4>
+                <h3 className={styles.detailTitle}>{"Wash U Want"}</h3>
                 <p>
                   visit their website on:&nbsp;
                   <Link href="https://washuwant.com/" target="_blank">

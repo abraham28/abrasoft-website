@@ -3,6 +3,7 @@
   color: var(--light);
   padding-top: var(--padding-4xl);
   padding-bottom: var(--padding-4xl);
+  overflow-wrap: anywhere;
 }
 
 .container {
@@ -24,7 +25,6 @@
 .abrasoft,
 .isASoftware {
   font-weight: var(--font-weight-bolder);
-  font-size: var(--font-size-3xl);
   max-width: 500px;
 }
 
@@ -33,6 +33,5 @@
 }
 
 .shortsummary {
-  font-size: var(--font-size-base);
   max-width: 500px;
 }

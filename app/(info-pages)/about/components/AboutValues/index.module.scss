@@ -3,6 +3,7 @@
   padding-bottom: var(--padding-4xl);
   background-color: var(--light);
   color: var(--secondary);
+  overflow-wrap: anywhere;
 
   b {
     color: var(--primary);
@@ -11,7 +12,6 @@
 }
 
 .ourValues {
-  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bolder);
   text-align: center;
   margin-bottom: var(--padding-2xl);
