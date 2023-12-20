@@ -1,18 +1,25 @@
 .navBar {
   display: flex;
+  align-items: center;
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   right: 0;
   background-color: var(--light);
+  transition: background-color 1s;
+}
+
+.navBarColored {
+  background-color: var(--light);
 }
 
 .innerContainer {
-  flex-wrap: nowrap;
   display: flex;
   place-content: center space-between;
-  background-color: var(--light);
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
 
   @media screen and (width < 992px) {
     --bs-gutter-x: 1.5rem;
@@ -33,13 +40,21 @@
   text-decoration: none;
 
   img {
-    margin-right: 8px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-right: 4px;
   }
 
   p {
+    display: none;
     margin: 0;
     color: var(--primary);
     font-weight: 700;
     font-size: 28px;
+
+    @media screen and (width >= 278px) {
+      display: unset;
+    }
   }
 }

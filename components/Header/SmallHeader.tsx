@@ -19,7 +19,7 @@ const Header = () => {
     <div className={styles.sideNavOpenner}>
       <SideNav open={navOpen} onClose={closeNav} />
       <span onClick={openNav}>
-        <FaBars size={32} color="var(--secondary)" />
+        <FaBars size={32} color="var(--primary)" />
       </span>
     </div>
   );
