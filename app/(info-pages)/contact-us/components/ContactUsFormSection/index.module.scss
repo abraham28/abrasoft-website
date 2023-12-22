@@ -1,0 +1,20 @@
+.connectWithUsToday {
+  font-weight: 600;
+  font-size: 35px;
+
+  @media (width <= 991px) {
+    text-align: center;
+  }
+}
+
+.exploreOurWorld {
+  font-size: 20px;
+
+  @media (width <= 991px) {
+    text-align: center;
+  }
+}
+
+.submittedForm {
+  height: 692px;
+}
