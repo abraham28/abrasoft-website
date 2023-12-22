@@ -70,12 +70,17 @@ const ContactUsPoolingForm = () => {
             <Row>
               <Col lg={6} className="mb-3">
                 <FormLabel className={styles.formLabel}>First Name *</FormLabel>
-                <FormControl type="text" name="firstName" placeholder="John" />
+                <FormControl
+                  type="text"
+                  name="firstName"
+                  placeholder="John"
+                  required
+                />
               </Col>
 
               <Col lg={6} className="mb-3">
                 <FormLabel className={styles.formLabel}>Last Name *</FormLabel>
-                <FormControl name="lastName" placeholder="Dela Cruz" required />
+                <FormControl name="lastName" placeholder="Dela Cruz" />
               </Col>
             </Row>
 

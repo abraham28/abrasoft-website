@@ -25,5 +25,5 @@ export const candidateRawFormSchema = Yup.object().shape({
 
   service: Yup.string().required("Service type is required"),
 
-  message: Yup.string().required("Service type is required"),
+  message: Yup.string().required("Message is required"),
 });

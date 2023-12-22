@@ -11,22 +11,25 @@ const ServiceChoicesForm: React.FC<ServiceChoicesFormProps> = ({
   const [selectedService, setSelectedService] = useState("");
 
   const handleServiceChange: ChangeEventHandler<HTMLSelectElement> = (
-    event,
+    event
   ) => {
-    const selectedValue = event.target.value; //Value of selected option
+    const selectedValue = event.target.value;
     setSelectedService(selectedValue);
     if (setService) {
-      {
-        selectedValue === "Other" ? setService("") : setService(selectedValue);
+      if (selectedValue === "Other") {
+        // When "Other" is selected, pass an empty string as the service value
+        setService("");
+      } else {
+        // Pass the selected value as the service
+        setService(selectedValue);
       }
     }
   };
 
-  const handleOtherServiceChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleOtherServiceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Set the value entered by the user as the service
     if (setService) {
-      setService(event.target.value); //Value of other option
+      setService(event.target.value);
     }
   };
 
@@ -47,6 +50,7 @@ const ServiceChoicesForm: React.FC<ServiceChoicesFormProps> = ({
           type="text"
           placeholder="Enter other service type"
           onChange={handleOtherServiceChange}
+          required
         />
       )}
     </div>
