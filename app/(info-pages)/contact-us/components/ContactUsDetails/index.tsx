@@ -1,9 +1,8 @@
 import React from "react";
-import { NextPage } from "next";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./index.module.scss";
 
-const ContactUsDetails: NextPage = () => {
+const ContactUsDetails: React.FC = () => {
   return (
     <section className={`py-5 ${styles.sectionLayout}`}>
       <Container>
@@ -15,11 +14,11 @@ const ContactUsDetails: NextPage = () => {
           >
             <div>
               <h5>Abraham Guerrero</h5>
-              <h5>+63 915 654 9303</h5>
+              <h5>+63 915-654-9303</h5>
               <h5>abraham.guerrero@abrasoft.com</h5>
               <h5>
-                Blk 11 Lot 28 Security Ave. Banckers Village 1, North Caloocan
-                City
+                Blk 11 Lot 28 Security Ave. Banker&apos;s Village 1, North
+                Caloocan City, Philippines
               </h5>
             </div>
           </Col>

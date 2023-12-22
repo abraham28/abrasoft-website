@@ -9,10 +9,8 @@ const HeroSection: NextPage = () => {
       <Container className={styles.container}>
         <div className={styles.headerText}>
           <div>
-            <h1 className={styles.header}>Unveiling Connections</h1>
-            <p className={styles.elevatingYourExperience}>
-              Elevating Your Experience Beyond the Website
-            </p>
+            <h1>Unveiling Connections</h1>
+            <p>Elevating Your Experience Beyond the Website</p>
           </div>
         </div>
       </Container>

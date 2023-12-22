@@ -44,11 +44,11 @@ const Footer: React.FC<Footer> = () => {
                     {constants.EMAIL_ADDRESS}
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href={constants.FACEBOOK_LINK} target="_blank">
                     {constants.FACEBOOK_LINK}
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

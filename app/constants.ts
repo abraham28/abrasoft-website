@@ -1,4 +1,4 @@
-export const FACEBOOK_LINK = "https://www.facebook.com/abrasoft";
+// export const FACEBOOK_LINK = "https://www.facebook.com/abrasoft";
 export const EMAIL_ADDRESS = "abraham.guerrero@abrasoft.com";
 export const CONTACT_NUMBER = "(+63) 915-654-9303";
 
