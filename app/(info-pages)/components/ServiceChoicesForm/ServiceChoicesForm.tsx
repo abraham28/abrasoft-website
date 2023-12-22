@@ -16,17 +16,15 @@ const ServiceChoicesForm: React.FC<ServiceChoicesFormProps> = ({
     const selectedValue = event.target.value;
     setSelectedService(selectedValue);
     if (setService) {
-      if (selectedValue === "Other") {
-        // When "Other" is selected, pass an empty string as the service value
-        setService("");
-      } else {
-        // Pass the selected value as the service
-        setService(selectedValue);
-      }
+      {// When "Other" is selected, pass an empty string as the service value
+        selectedValue === "Other" ? setService("") : setService(selectedValue);
+      } 
     }
   };
 
-  const handleOtherServiceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOtherServiceChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     // Set the value entered by the user as the service
     if (setService) {
       setService(event.target.value);
