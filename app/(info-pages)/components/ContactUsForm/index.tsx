@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import {
   Button,
@@ -6,121 +5,152 @@ import {
   Container,
   Form,
   FormControl,
+  FormGroup,
   FormLabel,
   Row,
 } from "react-bootstrap";
 import styles from "./index.module.scss";
 import { candidateRawFormSchema } from "@/helpers/validators";
 import ServiceChoicesForm from "../ServiceChoicesForm/ServiceChoicesForm";
-
-interface FormElements extends HTMLFormControlsCollection {
-  firstName: HTMLInputElement;
-  lastName: HTMLInputElement;
-  company: HTMLInputElement;
-  email: HTMLInputElement;
-  phoneNumber: HTMLInputElement;
-  service: HTMLInputElement;
-  message: HTMLInputElement;
-}
+import * as formik from "formik";
 
 interface ContactUsPoolingFormProps {
   setSubmit: (value: boolean) => void;
 }
 
-const ContactUsPoolingForm: React.FC<ContactUsPoolingFormProps> = ({
-  setSubmit,
-}) => {
+const ContactUsPoolingForm: React.FC<ContactUsPoolingFormProps> = () => {
   const [service, setService] = useState("");
+  const { Formik } = formik;
 
-  const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    // Get form values
-    const { firstName, lastName, company, email, phoneNumber, message } = e
-      .currentTarget.elements as FormElements;
-
-    const formData = {
-      firstName: firstName.value,
-      lastName: lastName.value,
-      company: company.value,
-      email: email.value,
-      phoneNumber: phoneNumber.value,
-      service: service,
-      message: message.value,
-    };
-
-    candidateRawFormSchema
-      .validate(formData)
-      .then(() => {
-        alert(`
-          Firstname: ${formData.firstName}
-          LastName: ${formData.lastName}
-          Company: ${formData.company ? `${formData.company}` : "None"}
-          Email: ${formData.email}
-          phoneNumber: ${formData.phoneNumber}
-          Service: ${service}
-          Message: ${formData.message}`);
-        setSubmit(true);
-      })
-      .catch((err) => {
-        console.error(err.errors);
-        alert(err.errors);
-      });
-  };
   return (
     <section>
       <Container>
-        <Form className={styles.formLayout} onSubmit={onSubmitForm}>
-          <Row>
-            <Col lg={6} className="mb-3">
-              <FormLabel className={styles.formLabel}>First Name *</FormLabel>
-              <FormControl type="text" name="firstName" placeholder="John" />
-            </Col>
+        <Formik
+          validationSchema={candidateRawFormSchema}
+          onSubmit={console.log}
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            company: "",
+            email: "",
+            phoneNumber: "",
+            service: service,
+            message: "",
+          }}
+        >
+          {({ handleSubmit, handleChange, values, errors }) => (
+            <Form
+              noValidate
+              className={styles.formLayout}
+              onSubmit={handleSubmit}
+            >
+              <Row>
+                <FormGroup as={Col} lg={6} className="mb-3">
+                  <FormLabel className={styles.formLabel}>
+                    First Name *
+                  </FormLabel>
+                  <FormControl
+                    type="text"
+                    name="firstName"
+                    placeholder="John"
+                    value={values.firstName}
+                    onChange={handleChange}
+                    isInvalid={!!errors.firstName}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.firstName}
+                  </Form.Control.Feedback>
+                </FormGroup>
 
-            <Col lg={6} className="mb-3">
-              <FormLabel className={styles.formLabel}>Last Name *</FormLabel>
-              <FormControl name="lastName" placeholder="Dela Cruz" />
-            </Col>
-          </Row>
+                <FormGroup as={Col} lg={6} className="mb-3">
+                  <FormLabel className={styles.formLabel}>
+                    Last Name *
+                  </FormLabel>
+                  <FormControl
+                    name="lastName"
+                    placeholder="Dela Cruz"
+                    value={values.lastName}
+                    onChange={handleChange}
+                    isInvalid={!!errors.lastName}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.lastName}
+                  </Form.Control.Feedback>
+                </FormGroup>
+              </Row>
 
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Company</FormLabel>
-            <FormControl placeholder="My Company" name="company" />
-          </div>
+              <FormGroup className="mb-3">
+                <FormLabel className={styles.formLabel}>Company</FormLabel>
+                <FormControl
+                  placeholder="My Company"
+                  name="company"
+                  value={values.company}
+                  onChange={handleChange}
+                  isInvalid={!!errors.company}
+                />
+              </FormGroup>
 
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Email *</FormLabel>
-            <FormControl
-              type="email"
-              placeholder="email@example.com"
-              name="email"
-            />
-          </div>
+              <FormGroup className="mb-3">
+                <FormLabel className={styles.formLabel}>Email *</FormLabel>
+                <FormControl
+                  type="email"
+                  placeholder="email@example.com"
+                  name="email"
+                  onChange={handleChange}
+                  value={values.email}
+                  isInvalid={!!errors.email}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.email}
+                </Form.Control.Feedback>
+              </FormGroup>
 
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Phone *</FormLabel>
-            <FormControl
-              type="tel"
-              placeholder="(+63) 000 0000 000"
-              name="phoneNumber"
-            />
-          </div>
+              <FormGroup className="mb-3">
+                <FormLabel className={styles.formLabel}>Phone *</FormLabel>
+                <FormControl
+                  type="tel"
+                  placeholder="(+63) 000 0000 000"
+                  name="phoneNumber"
+                  value={values.phoneNumber}
+                  onChange={handleChange}
+                  isInvalid={!!errors.phoneNumber}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.phoneNumber}
+                </Form.Control.Feedback>
+              </FormGroup>
 
-          <ServiceChoicesForm setService={setService} />
+              <ServiceChoicesForm
+                value={values.service}
+                handleOtherServiceChange={handleChange}
+                setService={setService}
+                isInvalid={!!errors.service}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.service}
+              </Form.Control.Feedback>
 
-          <div className="mb-3">
-            <FormLabel className={styles.formLabel}>Message *</FormLabel>
-            <FormControl
-              placeholder="Write a message"
-              as="textarea"
-              name="message"
-              rows={3}
-            />
-          </div>
-          <Button type="submit" className={`w-100 ${styles.submitButton}`}>
-            Submit
-          </Button>
-        </Form>
+              <FormGroup className="mb-3">
+                <FormLabel className={styles.formLabel}>Message *</FormLabel>
+                <FormControl
+                  placeholder="Write a message"
+                  as="textarea"
+                  name="message"
+                  rows={3}
+                  value={values.message}
+                  onChange={handleChange}
+                  isInvalid={!!errors.message}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.lastName}
+                </Form.Control.Feedback>
+              </FormGroup>
+              <Button type="submit" className={`w-100 ${styles.submitButton}`}>
+                Submit
+              </Button>
+            </Form>
+          )}
+        </Formik>
       </Container>
     </section>
   );
