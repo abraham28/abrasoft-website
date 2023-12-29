@@ -1,11 +1,13 @@
 import * as Yup from "yup";
 
 export const candidateRawFormSchema = Yup.object().shape({
-  firstName: Yup.string().required("First Name is required"),
+  message: Yup.string().required("Message is required"),
 
-  lastName: Yup.string().required("Last Name is required"),
+  service: Yup.string().required("Service type is required"),
 
-  company: Yup.string(),
+  phoneNumber: Yup.string()
+    .required("Phone Number is required")
+    .matches(/^[0-9]+$/, "Invalid phone number"),
 
   email: Yup.string()
     .matches(
@@ -19,11 +21,9 @@ export const candidateRawFormSchema = Yup.object().shape({
     )
     .required("Email is required"),
 
-  phoneNumber: Yup.string()
-    .required("Phone Number is required")
-    .matches(/^[0-9]+$/, "Invalid phone number"),
+  company: Yup.string(),
 
-  service: Yup.string().required("Service type is required"),
+  lastName: Yup.string().required("Last Name is required"),
 
-  message: Yup.string().required("Service type is required"),
+  firstName: Yup.string().required("First Name is required"),
 });

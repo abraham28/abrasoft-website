@@ -1,0 +1,41 @@
+.completeFormDisplay {
+  max-width: 700px;
+  border: 0.5px solid var(--primary);
+  padding: 20px;
+}
+
+.thankYou {
+  text-align: left;
+  font-weight: 700;
+
+  @media (width <= 992px) {
+    text-align: center;
+  }
+}
+
+.pleaseExpect {
+  text-align: left;
+  font-weight: 500;
+
+  @media (width <= 992px) {
+    text-align: center;
+  }
+}
+
+.imageStyle {
+  @media (width <= 992px) {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .buttonAlignment {
+    @media (width <= 992px) {
+      margin-left: 200px;
+    }
+  }
+
+  @media (width >=992px) {
+    max-width: 700px;
+    height: auto;
+  }
+}
