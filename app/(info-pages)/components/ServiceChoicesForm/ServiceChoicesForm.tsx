@@ -1,45 +1,44 @@
-import React, { ChangeEventHandler, useState } from "react";
+import React, { ChangeEvent, ChangeEventHandler } from "react";
 import { FormControl, FormLabel, FormSelect } from "react-bootstrap";
 
 interface ServiceChoicesFormProps {
-  setService?: (value: string) => void;
+  setService: (value: string) => void;
   value: string;
-  handleOtherServiceChange: (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => void;
+  onChangeService: (event: React.ChangeEvent<HTMLInputElement>) => void;
   isInvalid: boolean;
 }
 
 const ServiceChoicesForm: React.FC<ServiceChoicesFormProps> = ({
   setService,
+  onChangeService,
+  isInvalid,
 }) => {
-  const [selectedService, setSelectedService] = useState("");
+  const [selectedService, setSelectedService] = React.useState("");
 
   const handleServiceChange: ChangeEventHandler<HTMLSelectElement> = (
     event,
   ) => {
     const selectedValue = event.target.value;
     setSelectedService(selectedValue);
-    if (setService) {
-      {
-        // When "Other" is selected, pass an empty string as the service value
-        selectedValue === "Other" ? setService("") : setService(selectedValue);
-      }
-    }
+    setService(selectedValue === "Other" ? "" : selectedValue);
+
+    onChangeService({
+      target: {
+        value: selectedValue,
+        name: "service",
+      },
+    } as React.ChangeEvent<HTMLInputElement>);
   };
 
-  const handleOtherServiceChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    // Set the value entered by the user as the service
-    if (setService) {
-      setService(event.target.value);
-    }
-  };
   return (
-    <div className="mb-3">
+    <div>
       <FormLabel className="mb-0">Service *</FormLabel>
-      <FormSelect onChange={handleServiceChange} value={selectedService}>
+      <FormSelect
+        name="service"
+        isInvalid={isInvalid}
+        onChange={handleServiceChange}
+        value={selectedService}
+      >
         <option value="">Select your desired service</option>
         <option value="Web Development">Web Development</option>
         <option value="App Development">App Development</option>
@@ -49,10 +48,12 @@ const ServiceChoicesForm: React.FC<ServiceChoicesFormProps> = ({
       {/* Create form control if users choose other service type */}
       {selectedService === "Other" && (
         <FormControl
-          className="my-2"
+          className="mt-2"
           type="text"
+          name="service"
+          isInvalid={isInvalid}
           placeholder="Enter other service type"
-          onChange={handleOtherServiceChange}
+          onChange={onChangeService}
           required
         />
       )}

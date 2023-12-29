@@ -47,7 +47,9 @@ const ContactUsFormSection: NextPage = () => {
                   Please expect a call from one of our associates
                 </h5>
                 <div className={styles.buttonAlignment}>
-                  <Button className="d-block" href={HOME_ROUTE}>Back to Home</Button>
+                  <Button className="d-block" href={HOME_ROUTE}>
+                    Back to Home
+                  </Button>
                 </div>
               </div>
             </Col>

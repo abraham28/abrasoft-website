@@ -120,15 +120,20 @@ const ContactUsPoolingForm: React.FC<ContactUsPoolingFormProps> = () => {
                 </Form.Control.Feedback>
               </FormGroup>
 
-              <ServiceChoicesForm
-                value={values.service}
-                handleOtherServiceChange={handleChange}
-                setService={setService}
-                isInvalid={!!errors.service}
-              />
-              <Form.Control.Feedback type="invalid">
-                {errors.service}
-              </Form.Control.Feedback>
+              <FormGroup className="mb-3">
+                <ServiceChoicesForm
+                  value={values.service}
+                  onChangeService={handleChange}
+                  setService={setService}
+                  isInvalid={!!errors.service}
+                />
+                <Form.Control.Feedback
+                  style={{ display: "block", marginTop: 4 }}
+                  type="invalid"
+                >
+                  {errors.service}
+                </Form.Control.Feedback>
+              </FormGroup>
 
               <FormGroup className="mb-3">
                 <FormLabel className={styles.formLabel}>Message *</FormLabel>
