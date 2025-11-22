@@ -6,8 +6,8 @@ This website is built with Next.js for the purposes of representing Abrasoft. Be
 
 ### Prerequisites
 
-- Node.js (>=14.x)
-- npm (>=6.x)
+- Node.js (>=22.0.0)
+- npm (>=10.0.0)
 
 ### Installation
 
