@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx eslint \"**/*.{js,ts,tsx}\" --fix && npx stylelint \"**/*.{css,scss}\" --fix && npx prettier \"**/*.{html,json}\" --write",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,html,css,scss,md}\"",
     "serve": "npm run build && npm run start",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged && npx next build\""
   },
