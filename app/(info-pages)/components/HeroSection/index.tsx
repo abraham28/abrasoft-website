@@ -11,11 +11,12 @@ const HeroSection = () => {
       <Container className={styles.container}>
         <div className={styles.content}>
           <h1>
-            Turning Ideas into <span>Reality</span>
+            Powerful <span>SaaS Solutions</span> for Your Business
           </h1>
           <p>
-            Access powerful SaaS solutions through subscription. Elevate your
-            business with high-value technology and innovation.
+            Streamline your operations with cloud-based software. Subscribe to
+            our suite of business applications and access powerful tools
+            instantly—no installation required.
           </p>
           <div className={styles.buttonWrapper}>
             <Link href={APPS_ROUTE} className={styles.ctaButtonLink}>

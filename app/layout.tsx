@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "software subscription",
     "enterprise SaaS",
   ],
-  authors: [{ name: "Abrasoft Corporation" }],
-  creator: "Abrasoft Corporation",
-  publisher: "Abrasoft Corporation",
+  authors: [{ name: "Abrasoft" }],
+  creator: "Abrasoft",
+  publisher: "Abrasoft",
   icons: [
     { url: "/favicon.ico", sizes: "any" },
     { type: "image/x-icon", url: "/favicon.ico" },

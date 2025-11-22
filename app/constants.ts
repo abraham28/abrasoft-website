@@ -27,5 +27,6 @@ export const NAV_LINKS_ARR = [
 export const OFFICIAL_DOMAIN = "abrasoft.com";
 export const OFFICIAL_DOMAIN_URL = `https://${OFFICIAL_DOMAIN}/`;
 
-export const COPYRIGHT = "© 2023 Abrasoft Corporation";
-export const TAGLINE = "Turning Dreams into Digital Reality";
+export const COPYRIGHT = "© 2025 Abrasoft";
+export const TAGLINE =
+  "Empowering Businesses Through Cloud-Based SaaS Solutions";
