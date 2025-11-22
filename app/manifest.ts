@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+    name: "Abrasoft | Elevating Businesses Through Innovative SaaS Solutions",
     short_name: "Abrasoft",
     description:
-      "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward. Explore our expertise in custom web and application development for unparalleled digital experiences.",
+      "Abrasoft offers powerful Software-as-a-Service (SaaS) solutions through subscription. Access cutting-edge business tools and applications designed to streamline operations and drive growth.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

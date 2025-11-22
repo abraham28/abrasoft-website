@@ -21,27 +21,28 @@ const AboutMissionVision: NextPage = () => {
         <div className={styles.container1}>
           <h2 className={styles.ourMission}>Our Mission</h2>
           <p className={styles.hereAtOur}>
-            Here at our company, we&apos;re on a mission to bring countless
-            digital dreams to life. From crafting standout websites to
-            developing engaging games and cutting-edge applications, our goal is
-            to exceed expectations for a diverse range of clients. We&apos;re
-            here as your dedicated team, leveraging the latest tech to make a
-            collective impact in the ever-evolving digital landscape. Let&apos;s
-            collaborate to achieve the goals of many and elevate the online
-            presence for everyone we work with.
+            Here at our company, we&apos;re on a mission to empower businesses
+            through accessible and powerful SaaS solutions. Our goal is to
+            provide subscription-based software tools that streamline
+            operations, enhance productivity, and drive growth for businesses of
+            all sizes. We&apos;re committed to delivering innovative cloud-based
+            solutions that are easy to access, scalable, and designed to meet
+            the evolving needs of modern businesses. Let&apos;s work together to
+            transform how businesses operate through cutting-edge SaaS
+            technology.
           </p>
         </div>
         <div className={styles.container2}>
           <h2 className={styles.ourVision}>Our Vision</h2>
           <p className={styles.hereAtOur1}>
             Here at our company, we envision establishing ourselves as a trusted
-            beacon in the realm of software development services, cultivating
-            robust relationships not only with large corporations but also with
-            government entities. Our broader vision extends to making
-            substantial contributions to the technological progress of the
-            Philippines. By harnessing our expertise, we aim to play a pivotal
-            role in shaping the digital landscape, fostering innovation, and
-            driving positive change on a national scale.
+            leader in the SaaS industry, cultivating robust relationships not
+            only with large corporations but also with government entities. Our
+            broader vision extends to making substantial contributions to the
+            technological progress of the Philippines. By providing accessible
+            and powerful subscription-based software solutions, we aim to play a
+            pivotal role in shaping the digital landscape, fostering innovation,
+            and driving positive change on a national scale.
           </p>
         </div>
       </Container>

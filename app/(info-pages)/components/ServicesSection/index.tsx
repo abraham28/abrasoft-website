@@ -6,33 +6,33 @@ import Image from "next/image";
 
 const sampleServices: ServiceItem[] = [
   {
-    title: "App Development",
+    title: "Business Management SaaS",
     imgSrc: "/images/app-development.jpg",
-    p: "Whether it's your personalized accounting software, HR system, or a versatile POS, we specialize in crafting tailored application tools that meet your unique requirements.",
+    p: "Access powerful business management tools through subscription. Our SaaS solutions include accounting software, HR systems, and versatile POS platforms designed to streamline your operations.",
     features: [
-      "Deployment to Apple Store or Play Store",
-      "Built using Flutter",
-      "Ongoing App Maintenance",
+      "Cloud-Based Access",
+      "Subscription-Based Pricing",
+      "Regular Updates and Support",
     ],
   },
   {
-    title: "Web Development",
+    title: "Web-Based Solutions",
     imgSrc: "/images/responsive-web-design.webp",
-    p: "From sleek corporate websites to dynamic e-commerce platforms, we excel in creating customized web solutions that resonate with your brand and engage your audience.",
+    p: "Utilize our web-based SaaS platforms that work seamlessly across all devices. From business management dashboards to e-commerce solutions, access powerful tools through your browser.",
     features: [
-      "Responsive and User-Centric Designs",
+      "Responsive and User-Centric Design",
       "E-commerce Integration",
-      "SEO-Optimized Development",
+      "SEO-Optimized Platforms",
     ],
   },
   {
-    title: "Game Development",
+    title: "Specialized SaaS Tools",
     imgSrc: "/images/game-development.jpg",
-    p: "Embark on a gaming adventure with our expertise in developing captivating and immersive games. From concept to execution, we bring your gaming ideas to life.",
+    p: "Discover our range of specialized SaaS applications tailored for specific industries and business needs. Subscribe to the tools that matter most to your operations.",
     features: [
-      "Interactive and Engaging Gameplay",
-      "Cross-Platform Compatibility",
-      "Game Updates and Enhancements",
+      "Industry-Specific Solutions",
+      "Scalable Subscription Plans",
+      "Continuous Feature Updates",
     ],
   },
 ];

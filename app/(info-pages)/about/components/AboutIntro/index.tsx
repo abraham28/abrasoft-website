@@ -9,9 +9,7 @@ const AboutIntro: NextPage = () => {
       <Container className={styles.container}>
         <div className={styles.headings}>
           <h1 className={styles.abrasoft}>Abrasoft</h1>
-          <h2 className={styles.isASoftware}>
-            is a software development company
-          </h2>
+          <h2 className={styles.isASoftware}>is a SaaS company</h2>
         </div>
         <p className={styles.shortsummary}>
           Our company is guided by innovation, integrity and client

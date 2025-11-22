@@ -12,19 +12,18 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+  title: "Abrasoft | Elevating Businesses Through Innovative SaaS Solutions",
   description:
-    "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward. Explore our expertise in custom web and application development for unparalleled digital experiences.",
+    "Abrasoft offers powerful Software-as-a-Service (SaaS) solutions through subscription. Access cutting-edge business tools and applications designed to streamline operations and drive growth.",
   keywords: [
-    "software development",
-    "web development",
-    "app development",
-    "game development",
-    "custom software solutions",
-    "Flutter development",
-    "e-commerce development",
-    "SEO optimization",
+    "SaaS",
+    "Software as a Service",
+    "subscription software",
+    "business software",
+    "cloud-based solutions",
+    "SaaS platform",
+    "software subscription",
+    "enterprise SaaS",
   ],
   authors: [{ name: "Abrasoft Corporation" }],
   creator: "Abrasoft Corporation",
@@ -52,10 +51,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title:
-      "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+    title: "Abrasoft | Elevating Businesses Through Innovative SaaS Solutions",
     description:
-      "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward. Explore our expertise in custom web and application development for unparalleled digital experiences.",
+      "Abrasoft offers powerful Software-as-a-Service (SaaS) solutions through subscription. Access cutting-edge business tools and applications designed to streamline operations and drive growth.",
     url: OFFICIAL_DOMAIN_URL,
     siteName: "Abrasoft",
     type: "website",
@@ -63,10 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+    title: "Abrasoft | Elevating Businesses Through Innovative SaaS Solutions",
     description:
-      "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward.",
+      "Abrasoft offers powerful Software-as-a-Service (SaaS) solutions through subscription. Access cutting-edge business tools and applications.",
   },
   metadataBase: new URL(OFFICIAL_DOMAIN_URL),
 };

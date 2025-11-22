@@ -1,0 +1,121 @@
+.section {
+  padding: var(--padding-4xl) 0;
+  background-color: var(--bs-light);
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--gap-2xl);
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bolder);
+    color: var(--primary);
+    margin-bottom: var(--gap-lg);
+  }
+
+  p {
+    font-size: var(--font-size-lg);
+    color: var(--bs-dark);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  position: relative;
+
+  @media screen and (width >= 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap-base);
+  }
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: var(--padding-lg);
+
+  @media screen and (width >= 768px) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bolder);
+  margin-bottom: var(--gap-base);
+  flex-shrink: 0;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 0;
+    margin-right: var(--gap-lg);
+  }
+}
+
+.stepContent {
+  flex: 1;
+
+  h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bolder);
+    color: var(--primary);
+    margin-bottom: var(--gap-base);
+  }
+
+  p {
+    font-size: var(--font-size-base);
+    color: var(--bs-dark);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.connector {
+  display: none;
+
+  @media screen and (width >= 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.line {
+  width: 2px;
+  height: 40px;
+  background-color: var(--primary);
+  opacity: 0.3;
+}
+
+.arrow {
+  color: var(--primary);
+  font-size: var(--font-size-xl);
+  margin-top: -5px;
+}

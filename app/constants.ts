@@ -7,6 +7,7 @@ export const locales = ["en", "tl"];
 //ROUTES
 export const HOME_ROUTE = "/";
 export const ABOUT_ROUTE = "/about";
+export const APPS_ROUTE = "/apps";
 export const CONTACT_ROUTE = "/contact-us";
 
 export const NAV_HOME = "/";
@@ -14,6 +15,7 @@ export const NAV_HOME = "/";
 export const NAV_LINKS_ARR = [
   { path: HOME_ROUTE, name: "Home" },
   { path: ABOUT_ROUTE, name: "About Us" },
+  { path: APPS_ROUTE, name: "Apps" },
   {
     path: "https://books.abrasoft.com/login",
     name: "Accounting Books",

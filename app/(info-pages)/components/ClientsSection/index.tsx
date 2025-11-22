@@ -30,15 +30,14 @@ const ClientsSection = () => {
                   </Link>
                 </p>
                 <blockquote>
-                  Our experience with Abrasoft in building our website has been
-                  exceptional. The web development team demonstrated expertise
-                  in crafting a site that perfectly aligns with our brand and
-                  business objectives. The sleek, user-centric design coupled
-                  with seamless application form integration has significantly
-                  enhanced our online presence. Their commitment to SEO
-                  optimization has boosted our visibility. Overall, a
+                  Our experience with Abrasoft&apos;s SaaS solutions has been
+                  exceptional. Their platform perfectly aligns with our brand
+                  and business objectives. The sleek, user-centric interface
+                  coupled with seamless functionality has significantly enhanced
+                  our operations. Their commitment to continuous improvement and
+                  responsive support has made a real difference. Overall, a
                   professional and dedicated team that we highly recommend for
-                  web development projects.
+                  businesses looking for reliable SaaS solutions.
                 </blockquote>
               </div>
               <div className={styles.imgContainer}>
@@ -69,12 +68,12 @@ const ClientsSection = () => {
                 </p>
                 <blockquote>
                   Abrasoft delivered exceptional results for our laundry shop.
-                  Their team crafted a sleek landing page that perfectly aligns
-                  with our brand. The seamless integration of their laundry
-                  management SAAS has streamlined our operations, and their
-                  commitment to SEO optimization has boosted our online
-                  visibility. Highly recommend their professional and dedicated
-                  team for web development projects.
+                  Their laundry management SaaS has streamlined our operations
+                  significantly. The seamless subscription-based platform
+                  perfectly aligns with our needs, and their commitment to
+                  continuous updates and support has been outstanding. Highly
+                  recommend their professional and dedicated team for businesses
+                  looking for reliable SaaS solutions.
                 </blockquote>
               </div>
               <div className={styles.imgContainer}>

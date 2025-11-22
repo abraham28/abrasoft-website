@@ -3,6 +3,12 @@
   place-content: center;
   cursor: pointer;
 
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
   @media screen and (width >= 992px) {
     display: none;
   }

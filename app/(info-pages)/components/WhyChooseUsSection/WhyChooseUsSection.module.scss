@@ -1,0 +1,65 @@
+.section {
+  padding: var(--padding-4xl) 0;
+  background-color: var(--light);
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--gap-2xl);
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bolder);
+    color: var(--primary);
+    margin-bottom: var(--gap-lg);
+  }
+
+  p {
+    font-size: var(--font-size-lg);
+    color: var(--bs-dark);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--gap-xl);
+
+  @media screen and (width >= 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reasonCard {
+  background-color: var(--light);
+  border-left: 4px solid var(--primary);
+  padding: var(--padding-2xl);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bolder);
+    color: var(--primary);
+    margin-bottom: var(--gap-base);
+  }
+
+  p {
+    font-size: var(--font-size-base);
+    color: var(--bs-dark);
+    line-height: 1.6;
+    margin: 0;
+  }
+}

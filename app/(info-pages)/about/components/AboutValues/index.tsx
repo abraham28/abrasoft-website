@@ -59,14 +59,14 @@ const AboutValues: NextPage = () => {
               <span>
                 {" "}
                 is paramount in our approach. We go beyond meeting expectations;
-                we proactively offer recommendations for improvement even after
-                a project is considered successful. This dedication to
-                continuous enhancement showcases our problem-solving
-                capabilities and underscores our commitment to long-term client
-                success. Through the values of Innovation, Integrity,
-                Flexibility, and Client Satisfaction, we aim to not only meet
-                industry standards but set new benchmarks in the realm of
-                software development services.
+                we proactively offer recommendations for improvement and
+                continuously enhance our SaaS offerings based on user feedback.
+                This dedication to continuous enhancement showcases our
+                problem-solving capabilities and underscores our commitment to
+                long-term client success. Through the values of Innovation,
+                Integrity, Flexibility, and Client Satisfaction, we aim to not
+                only meet industry standards but set new benchmarks in the realm
+                of SaaS solutions.
               </span>
             </p>
           </div>

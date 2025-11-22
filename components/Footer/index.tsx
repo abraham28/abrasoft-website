@@ -8,25 +8,27 @@ interface Footer {}
 
 const Footer: React.FC<Footer> = () => {
   return (
-    <footer>
+    <footer id="contact" className={styles.footer}>
       <div className={styles.topFooter}>
         <Container className={styles.container}>
           <div className={styles.message}>
-            <p>We develop, test and deploy software apps.</p>
-            <p>
-              Tell us your idea.&nbsp;
-              <Button
-                variant="secondary"
-                as="a"
-                href={`mailto:${constants.EMAIL_ADDRESS}`}
-              >
-                Send a message
-              </Button>
+            <p className={styles.mainMessage}>
+              Access powerful SaaS solutions through subscription.
             </p>
+            <div>
+              <Link
+                href={constants.APPS_ROUTE}
+                className={styles.ctaButtonLink}
+              >
+                <Button variant="secondary" className={styles.ctaButton}>
+                  See all Apps
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className={styles.contactLinks}>
             <div>
-              <p>Browse More</p>
+              <h3>Browse More</h3>
               <ul>
                 {constants.NAV_LINKS_ARR.map((link, key) => (
                   <li key={key}>
@@ -38,7 +40,7 @@ const Footer: React.FC<Footer> = () => {
               </ul>
             </div>
             <div>
-              <p>Contact Us</p>
+              <h3>Contact Us</h3>
               <ul>
                 <li>
                   <Link href={`tel:${constants.CONTACT_NUMBER}`}>
@@ -55,12 +57,14 @@ const Footer: React.FC<Footer> = () => {
           </div>
         </Container>
       </div>
-      <Container>
-        <div className={styles.bottomFooter}>
-          <p>{constants.TAGLINE}</p>
-          <p>{constants.COPYRIGHT}</p>
-        </div>
-      </Container>
+      <div className={styles.bottomFooter}>
+        <Container>
+          <div className={styles.bottomContent}>
+            <p className={styles.tagline}>{constants.TAGLINE}</p>
+            <p className={styles.copyright}>{constants.COPYRIGHT}</p>
+          </div>
+        </Container>
+      </div>
     </footer>
   );
 };
