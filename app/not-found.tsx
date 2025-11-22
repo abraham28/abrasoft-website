@@ -30,9 +30,14 @@ const NotFoundPage = () => {
           height={0}
           style={{ width: 200, height: "auto" }}
         />
-        <h1 style={{ marginBottom: "2rem", fontSize: 24 }}>{"404-message"}</h1>
+        <h1 style={{ marginBottom: "2rem", fontSize: 24 }}>
+          Page Not Found (404)
+        </h1>
+        <p style={{ marginBottom: "2rem" }}>
+          The page you are looking for does not exist.
+        </p>
         <Link href={HOME_ROUTE}>
-          <Button>{"go-back-home"}</Button>
+          <Button>Go Back Home</Button>
         </Link>
       </Container>
     </div>

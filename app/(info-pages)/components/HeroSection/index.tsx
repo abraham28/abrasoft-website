@@ -14,8 +14,12 @@ const HeroSection = () => {
           business with high-value technology and innovation.
         </p>
         <div>
-          <Button variant="primary">Get in Touch</Button>
-          <Button variant="secondary">Learn More</Button>
+          <Button variant="primary" as="a" href="#contact">
+            Get in Touch
+          </Button>
+          <Button variant="secondary" as="a" href="/about">
+            Learn More
+          </Button>
         </div>
       </Container>
     </section>

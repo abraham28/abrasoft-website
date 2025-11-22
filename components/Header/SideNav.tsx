@@ -23,7 +23,12 @@ const SideNav: React.FC<SideNavProps> = ({ open, onClose }) => {
   }, [open]);
 
   return (
-    <div className={`${styles.sideNavWrapper}${open ? ` ${styles.open}` : ""}`}>
+    <div
+      className={`${styles.sideNavWrapper}${open ? ` ${styles.open}` : ""}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
       <div
         ref={sideNavRef}
         className={`${styles.sideNav} ${open ? ` ${styles.sideNavOpen}` : ""}`}
@@ -34,13 +39,18 @@ const SideNav: React.FC<SideNavProps> = ({ open, onClose }) => {
               width={0}
               height={60}
               className={styles.g1173411Icon}
-              alt=""
+              alt="Abrasoft Logo"
               src="/images/company-logo.webp"
             />
           </div>
-          <span className={styles.closeButton} onClick={onClose}>
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={onClose}
+            aria-label="Close navigation menu"
+          >
             <FaTimes size={32} color="var(--secondary)" />
-          </span>
+          </button>
         </div>
         <div className={styles.linksContainer}>
           <NavLinks onClick={onClose} />

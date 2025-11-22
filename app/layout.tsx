@@ -3,6 +3,7 @@ import "css/globals.scss";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { OFFICIAL_DOMAIN_URL } from "./constants";
+import { Analytics } from "@vercel/analytics/next";
 
 const roboto = Roboto({
   style: "normal",
@@ -15,6 +16,19 @@ export const metadata: Metadata = {
     "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
   description:
     "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward. Explore our expertise in custom web and application development for unparalleled digital experiences.",
+  keywords: [
+    "software development",
+    "web development",
+    "app development",
+    "game development",
+    "custom software solutions",
+    "Flutter development",
+    "e-commerce development",
+    "SEO optimization",
+  ],
+  authors: [{ name: "Abrasoft Corporation" }],
+  creator: "Abrasoft Corporation",
+  publisher: "Abrasoft Corporation",
   icons: [
     { url: "/favicon.ico", sizes: "any" },
     { type: "image/x-icon", url: "/favicon.ico" },
@@ -37,6 +51,24 @@ export const metadata: Metadata = {
     canonical: OFFICIAL_DOMAIN_URL,
   },
   manifest: "/manifest.webmanifest",
+  openGraph: {
+    title:
+      "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+    description:
+      "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward. Explore our expertise in custom web and application development for unparalleled digital experiences.",
+    url: OFFICIAL_DOMAIN_URL,
+    siteName: "Abrasoft",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Abrasoft | Elevating Businesses Through Innovative Software Solutions",
+    description:
+      "Abrasoft specializes in cutting-edge software development services, crafting solutions that propel businesses forward.",
+  },
+  metadataBase: new URL(OFFICIAL_DOMAIN_URL),
 };
 
 export default function RootLayout({
@@ -46,7 +78,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Analytics />
+        <a href="#main-content" className="visually-hidden-focusable">
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

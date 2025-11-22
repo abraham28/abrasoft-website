@@ -63,6 +63,8 @@ const ServicesSection = () => {
                   ? "primary"
                   : "transparent"
               }
+              aria-pressed={activeServiceItem.title === item.title}
+              aria-label={`Select ${item.title} service`}
             >
               {item.title}
             </Button>
@@ -72,7 +74,7 @@ const ServicesSection = () => {
           <div className={styles.imgContainer}>
             <Image
               src={activeServiceItem.imgSrc}
-              alt="Abrasoft Logo"
+              alt={`${activeServiceItem.title} service illustration`}
               height={250}
               width={500}
               className="d-inline-block align-text-top"
@@ -100,6 +102,7 @@ const ServicesSection = () => {
             height: 75,
             transform: "rotate(180deg) scaleX(-1)",
           }}
+          aria-hidden="true"
         >
           <path
             d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"

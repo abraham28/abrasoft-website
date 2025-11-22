@@ -16,6 +16,7 @@
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged && npx next build\""
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "@vercel/postgres": "^0.10.0",
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",

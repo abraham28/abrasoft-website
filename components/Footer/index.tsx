@@ -15,7 +15,13 @@ const Footer: React.FC<Footer> = () => {
             <p>We develop, test and deploy software apps.</p>
             <p>
               Tell us your idea.&nbsp;
-              <Button variant="secondary">Send a message</Button>
+              <Button
+                variant="secondary"
+                as="a"
+                href={`mailto:${constants.EMAIL_ADDRESS}`}
+              >
+                Send a message
+              </Button>
             </p>
           </div>
           <div className={styles.contactLinks}>
@@ -42,11 +48,6 @@ const Footer: React.FC<Footer> = () => {
                 <li>
                   <Link href={`mailto:${constants.EMAIL_ADDRESS}`}>
                     {constants.EMAIL_ADDRESS}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={constants.FACEBOOK_LINK} target="_blank">
-                    {constants.FACEBOOK_LINK}
                   </Link>
                 </li>
               </ul>

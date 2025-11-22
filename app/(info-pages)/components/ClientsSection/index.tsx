@@ -12,7 +12,7 @@ const ClientsSection = () => {
     <section className={styles.section}>
       <Container className={styles.container}>
         <h2>Our Client Reviews</h2>
-        <Carousel controls={false}>
+        <Carousel controls={false} aria-label="Client testimonials">
           <CarouselItem>
             <div className={styles.details}>
               <div className={styles.detailsText}>
@@ -21,7 +21,11 @@ const ClientsSection = () => {
                 </h4>
                 <p>
                   visit their website on:&nbsp;
-                  <Link href="https://stgabriellehrs.com/" target="_blank">
+                  <Link
+                    href="https://stgabriellehrs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {"stgabriellehrs.com"}
                   </Link>
                 </p>
@@ -55,7 +59,11 @@ const ClientsSection = () => {
                 <h3 className={styles.detailTitle}>{"Wash U Want"}</h3>
                 <p>
                   visit their website on:&nbsp;
-                  <Link href="https://washuwant.com/" target="_blank">
+                  <Link
+                    href="https://washuwant.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {"washuwant.com"}
                   </Link>
                 </p>

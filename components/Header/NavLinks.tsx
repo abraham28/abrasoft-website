@@ -20,6 +20,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
             href={link.path}
             key={link.path}
             target={link.target}
+            rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
             className={`${styles.link}${
               pathname === link.path ? ` ${styles.activeLink}` : ""
             }`}

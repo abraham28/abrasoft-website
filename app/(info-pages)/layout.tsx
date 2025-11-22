@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main style={{ paddingTop: 70 }}>
+    <main id="main-content" style={{ paddingTop: 70 }}>
       <Header />
       {children}
       <Footer />
