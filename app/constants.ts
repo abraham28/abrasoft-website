@@ -1,3 +1,5 @@
+import { NavLink } from "./utils/linkProps";
+
 export const FACEBOOK_LINK = "https://www.facebook.com/abrasoft";
 export const EMAIL_ADDRESS = "abraham.guerrero@abrasoft.com";
 export const CONTACT_NUMBER = "(+63) 915-654-9303";
@@ -12,7 +14,7 @@ export const CONTACT_ROUTE = "/contact-us";
 
 export const NAV_HOME = "/";
 
-export const NAV_LINKS_ARR = [
+export const NAV_LINKS_ARR: NavLink[] = [
   { path: HOME_ROUTE, name: "Home" },
   { path: ABOUT_ROUTE, name: "About Us" },
   { path: APPS_ROUTE, name: "Apps" },

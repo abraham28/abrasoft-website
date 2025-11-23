@@ -3,6 +3,7 @@ import styles from "./Footer.module.scss";
 import * as constants from "@/app/constants";
 import { Button, Container } from "react-bootstrap";
 import Link from "next/link";
+import { getLinkProps } from "@/app/utils/linkProps";
 
 interface Footer {}
 
@@ -31,27 +32,10 @@ const Footer: React.FC<Footer> = () => {
               <h3>Browse More</h3>
               <ul>
                 {constants.NAV_LINKS_ARR.map((link, key) => {
-                  const linkWithTarget = link as {
-                    path: string;
-                    name: string;
-                    target?: string;
-                  };
-                  const linkProps: {
-                    href: string;
-                    target?: string;
-                    rel?: string;
-                  } = {
-                    href: linkWithTarget.path,
-                  };
-                  if (linkWithTarget.target) {
-                    linkProps.target = linkWithTarget.target;
-                    if (linkWithTarget.target === "_blank") {
-                      linkProps.rel = "noopener noreferrer";
-                    }
-                  }
+                  const linkProps = getLinkProps(link);
                   return (
                     <li key={key}>
-                      <Link {...linkProps}>{linkWithTarget.name}</Link>
+                      <Link {...linkProps}>{link.name}</Link>
                     </li>
                   );
                 })}
