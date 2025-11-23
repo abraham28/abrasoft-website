@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { OFFICIAL_DOMAIN_URL } from "./constants";
 import { Analytics } from "@vercel/analytics/next";
+import StructuredData from "./components/StructuredData";
 
 const roboto = Roboto({
   style: "normal",
@@ -58,6 +59,14 @@ export const metadata: Metadata = {
     siteName: "Abrasoft",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: `${OFFICIAL_DOMAIN_URL}og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Abrasoft - SaaS Solutions for Your Business",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -76,6 +85,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <StructuredData type="organization" />
+        <StructuredData type="website" />
         <Analytics />
         <a href="#main-content" className="visually-hidden-focusable">
           Skip to main content

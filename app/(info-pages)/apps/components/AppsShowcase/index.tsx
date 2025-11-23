@@ -127,7 +127,7 @@ const AppsShowcase = () => {
                     rel="noopener noreferrer"
                     className={styles.appButton}
                   >
-                    Access App
+                    Open App
                   </Button>
                 ) : (
                   <Button

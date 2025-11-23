@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import StructuredData from "@/app/components/StructuredData";
 import styles from "./FAQSection.module.scss";
 
 interface FAQ {
@@ -50,6 +51,7 @@ const FAQSection = () => {
 
   return (
     <section className={styles.section}>
+      <StructuredData type="faq" data={{ faqs }} />
       <Container className={styles.container}>
         <div className={styles.header}>
           <h2>Frequently Asked Questions</h2>
