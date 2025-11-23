@@ -41,7 +41,7 @@
 
   img {
     width: 100%;
-    max-width: 200px;
+    max-width: 50px;
     height: auto;
     margin-right: 4px;
   }
@@ -51,7 +51,9 @@
     margin: 0;
     color: var(--primary);
     font-weight: 700;
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-4xl);
+    line-height: 1;
+    text-transform: uppercase;
 
     @media screen and (width >= 278px) {
       display: unset;
