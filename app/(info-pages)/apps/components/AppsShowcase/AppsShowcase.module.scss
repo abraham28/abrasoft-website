@@ -159,6 +159,40 @@
   }
 }
 
+.accountingCard {
+  border-color: #009245ff;
+
+  .appContent {
+    h2 {
+      color: #009245ff;
+    }
+  }
+
+  .features {
+    li {
+      &::before {
+        color: #009245ff;
+      }
+    }
+  }
+
+  .appButton {
+    background-color: #009245ff !important;
+    border-color: #009245ff !important;
+
+    &:hover,
+    &:focus {
+      background-color: #007a38 !important;
+      border-color: #007a38 !important;
+    }
+  }
+
+  &:hover {
+    border-color: #007a38;
+    box-shadow: 0 10px 30px rgb(0 146 69 / 20%);
+  }
+}
+
 .ctaSection {
   text-align: center;
   margin-top: calc(var(--gap-2xl));

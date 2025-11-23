@@ -96,7 +96,7 @@ const AppsShowcase = () => {
               key={app.id}
               className={`${styles.appCard} ${
                 !app.isActive ? styles.comingSoon : ""
-              }`}
+              } ${app.id === "accounting" ? styles.accountingCard : ""}`}
             >
               <div className={styles.appImage}>
                 <Image

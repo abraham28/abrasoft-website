@@ -135,3 +135,18 @@
     text-decoration: none;
   }
 }
+
+.accountingCard {
+  border-color: #009245ff;
+
+  .appContent {
+    h3 {
+      color: #009245ff;
+    }
+  }
+
+  &:hover {
+    border-color: #007a38;
+    box-shadow: 0 10px 30px rgb(0 146 69 / 20%);
+  }
+}
