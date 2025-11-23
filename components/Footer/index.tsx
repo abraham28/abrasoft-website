@@ -30,13 +30,31 @@ const Footer: React.FC<Footer> = () => {
             <div>
               <h3>Browse More</h3>
               <ul>
-                {constants.NAV_LINKS_ARR.map((link, key) => (
-                  <li key={key}>
-                    <Link href={link.path} target={link.target}>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
+                {constants.NAV_LINKS_ARR.map((link, key) => {
+                  const linkWithTarget = link as {
+                    path: string;
+                    name: string;
+                    target?: string;
+                  };
+                  const linkProps: {
+                    href: string;
+                    target?: string;
+                    rel?: string;
+                  } = {
+                    href: linkWithTarget.path,
+                  };
+                  if (linkWithTarget.target) {
+                    linkProps.target = linkWithTarget.target;
+                    if (linkWithTarget.target === "_blank") {
+                      linkProps.rel = "noopener noreferrer";
+                    }
+                  }
+                  return (
+                    <li key={key}>
+                      <Link {...linkProps}>{linkWithTarget.name}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div>
