@@ -16,12 +16,6 @@ export const NAV_LINKS_ARR = [
   { path: HOME_ROUTE, name: "Home" },
   { path: ABOUT_ROUTE, name: "About Us" },
   { path: APPS_ROUTE, name: "Apps" },
-  {
-    path: "https://books.abrasoft.com/login",
-    name: "Accounting Books",
-    target: "_blank",
-  },
-  // { path: CONTACT_ROUTE, name: "Contact Us" },
 ];
 
 export const OFFICIAL_DOMAIN = "abrasoft.com";

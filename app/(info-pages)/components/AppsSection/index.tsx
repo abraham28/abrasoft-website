@@ -20,7 +20,7 @@ const featuredApps: App[] = [
     title: "Accounting Software",
     description:
       "Comprehensive accounting solution for managing your business finances.",
-    imgSrc: "/images/app-development.jpg",
+    imgSrc: "/images/abrasoft-accounting-logo.webp",
     isActive: true,
   },
   {

@@ -23,7 +23,7 @@ const apps: App[] = [
     title: "Accounting Software",
     description:
       "Comprehensive accounting solution for managing your business finances. Track income, expenses, invoices, and generate financial reports with ease.",
-    imgSrc: "/images/app-development.jpg",
+    imgSrc: "/images/abrasoft-accounting-logo.webp",
     isActive: true,
     link: "https://books.abrasoft.com/login",
     features: [
